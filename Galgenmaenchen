@@ -1,95 +1,95 @@
-/* Programmname: Vorlage.cpp
-Aktion: keine
-Datum: 19.09.2014
-Autor: M. Kostolich
+/*  Programmname:   Vorlage.cpp
+    Aktion:         keine
+    Datum:          19.09.2014
+    Autor:          M. Kostolich
 */
- 
+
 #include <iostream>
+#include <string.h>
+
 using namespace std;
- 
- 
+
+
 int main()
 {
-// Hierher kommt Ihr Quelltext
- 
- 
- 
-#include <iostream>
-#include <string>
- 
- 
- 
-using namespace std;
- 
-cout << "////////////////////" << endl;
-cout << "// //" << endl;
-cout << "// //" << endl;
-cout << "// Galgen Spiel //" << endl;
-cout << "// //" << endl;
-cout << "// //" << endl;
-cout << "////////////////////" << endl;
- 
- 
-string wort;
-string eingabe;
-char eingabec;
-char wortc;
-int versuche = 1;
-cout << endl << "Bitte ein Wort eingeben: "; cin >> wort;
- 
-system("CLS"); //Bildschirm wird geleert
-cout << "////////////////////" << endl;
-cout << "// //" << endl;
-cout << "// //" << endl;
-cout << "// Galgen Spiel //" << endl;
-cout << "// //" << endl;
-cout << "// //" << endl;
-cout << "////////////////////" << endl << endl;
- 
-for(int i=1; i<=wort.length();i++)
-{
-cout << "_ ";
-}
- 
-cout << "Das gesuchte Wort ist " << wort.length() <<" Buchstaben lang." <<endl; //Gesuchte Wort länge
- 
- 
- 
+    // Hierher kommt Ihr Quelltext
+
+
+
+
+
+	cout << "////////////////////" << endl;
+	cout << "//                //" << endl;
+	cout << "//                //" << endl;
+	cout << "//  Galgen Spiel  //" << endl;
+	cout << "//                //" << endl;
+	cout << "//                //" << endl;
+	cout << "////////////////////" << endl;
+
+
+	string wort;
+	string eingabe;
+	int versuche = 1;
+	
+	
+	
+	
+	cout << endl << "Bitte ein Wort eingeben: "; 	cin >> wort;
+
+	system("CLS"); //Bildschirm wird geleert
+	
+	
+	
+	cout << "////////////////////" << endl;
+	cout << "//                //" << endl;
+	cout << "//                //" << endl;
+	cout << "//  Galgen Spiel  //" << endl;
+	cout << "//                //" << endl;
+	cout << "//                //" << endl;
+	cout << "////////////////////" << endl << endl;
+
+for(int i=1; i<=sizeof(wort);i++)
+	{
+	
+	cout << "_ ";
+	}
+
+cout << "Das gesuchte Wort ist " << sizeof(wort) <<" Buchstaben lang." <<endl; //Gesuchte Wort länge
+
+
+
 /// Das eingegebene Wort wird in ein Array gespeichert
- 
-for( int i = 0; i < wort.length(); i++ )
- 
-{
-char wortc = wort[i];
-}
- 
- 
- 
-while(eingabe.length()!=1) //Es darf nur ein Buchstabe eingegeben werden.
- 
-{
-cout << endl << "Bitte nur ein Buchstabe eingeben." << endl <<endl;
- 
-cin >> eingabe;
-cout << endl << versuche << ". Versuch";
-versuche++;
-}
- 
- 
-/// Die Eingabe wird als Array gespeichert
- 
-for( int i = 0; i < eingabe.length(); i++ )
- 
-{
-char eingabec = eingabe[i];
-}
- 
- 
- 
-if(wort==eingabe) cout << "Richtig";
- 
- 
-fflush(stdin); //Löscht alles im Buffer
-getchar();
-return 0;
+
+
+
+
+while(eingabe.length()!=1)   //Es darf nur ein Buchstabe eingegeben werden.
+
+	{
+	cout << endl << "Bitte nur ein Buchstabe eingeben." << endl <<endl;
+
+	cin >> eingabe;
+	cout << endl << versuche << ". Versuch";
+	versuche++;
+	}
+
+
+char wortc[1024];
+strcpy (wortc, wort.c_str());
+
+cout << wortc;
+
+
+	
+	//if(wort==eingabe) cout << "Richtig";
+	
+	
+
+
+
+
+
+    fflush(stdin); //Löscht alles im Buffer
+    getchar();
+    return 0;
 }
